@@ -17,3 +17,7 @@ services:
       - MONGO_PASSWORD=1234
       - SESSION_SECRET=asdasdqweqwedssad
     command: npm run dev
+  mongo:
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=swistek
+      - MONGO_INITDB_ROOT_PASSWORD=1234
