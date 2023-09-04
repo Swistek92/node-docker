@@ -1,3 +1,5 @@
 docker run -v $(pwd):/app:ro -v /app/node_modules --env-file ./.env -p 3000:4000 --name node-app -d node-app-image
 
 ssh anon@192.168.50.60
+
+docker-compose -f docker-compose.yml -f docker-compose.prod.yml up -d --build

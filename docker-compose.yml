@@ -8,6 +8,7 @@ services:
       - ./nginx/default.conf:/etc/nginx/conf.d/default.conf:ro
   node-app:
     build: .
+    image: swistek/node-app
     environment:
       - PORT=3000
     depends_on:
@@ -15,7 +16,7 @@ services:
   mongo:
     image: mongo
     environment:
-      - MONGO_INITDB_ROOT_USERNAME=swistek 
+      - MONGO_INITDB_ROOT_USERNAME=swistek
       - MONGO_INITDB_ROOT_PASSWORD=1234
     volumes:
       - mongo-db:/data/db
