@@ -13,3 +13,10 @@ docker run -d --name watchtower -e WATCHTOWER_TRACE=true -e WATCHTOWER_DEBUG=tru
 docker swarm init 
 
 docker services 
+
+docker stack 
+docker stack deploy -c docker-compose.yml -c docker-compose.prod.yml myapp
+
+docker node ls 
+docker stack ls 
+docker stack --help 
