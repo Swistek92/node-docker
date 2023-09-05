@@ -3,3 +3,13 @@ docker run -v $(pwd):/app:ro -v /app/node_modules --env-file ./.env -p 3000:4000
 ssh anon@192.168.50.60
 
 docker-compose -f docker-compose.yml -f docker-compose.prod.yml up -d --build
+
+
+docker run -d --name watchtower -e WATCHTOWER_TRACE=true -e WATCHTOWER_DEBUG=true -e WATCHTOWER_POLL_INTERVAL=30 -v /var/run/docker.sock:/var/run/docker.sock containrrr/watchtower node-docker_node-app_1
+
+
+//
+
+docker swarm init 
+
+docker services 
